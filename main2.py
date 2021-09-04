@@ -2,8 +2,8 @@ import requests
 import time
 from playsound import playsound
 
-pcode = 286
-date = '10-06-2021'
+pcode = #any pincode specified by user this must  be extracted from cowin website as they have given different codes according to locations
+date = '10-06-2021' #date specified for vaccination
 URL = 'https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByDistrict?district_id={}&date={}'.format(
     pcode, date)
 
@@ -23,7 +23,7 @@ def findAvailability():
             print(each["pincode"])
             print(each["vaccine"])
             print(each["available_capacity"])
-            playsound('C:/Users/ASUS/Downloads/ding-sound.mp3')
+            playsound('')#any alert sound specified
             
     if(counter == 0):
         global i
